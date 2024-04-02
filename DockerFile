@@ -1,0 +1,7 @@
+FROM node
+LABEL maintainer "pedro.hernandez@tecsup.edu.pe"
+RUN git clone -q https://github.com/DraCod2002/node-docker
+WORKDIR /node-docker
+RUN npm install > /dev/null
+EXPOSE 5000
+CMD ["npm", "start"]
